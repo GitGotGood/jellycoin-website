@@ -102,7 +102,88 @@
       text-align: left;
       padding-left: 0;
     }
-  </style>
+
+    /* Mobile-specific adjustments */
+    @media screen and (max-width: 768px) {
+      header {
+        height: 300px; /* Shorter header on mobile */
+        padding: 1rem;
+      }
+
+      .floating-icon {
+        width: 150px; /* Smaller icon on mobile */
+        top: 25%;
+      }
+
+      .header-text {
+        bottom: 1rem;
+        margin: 0 0.5rem;
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+      }
+
+      h1 {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      main {
+        padding: 1rem 0.75rem;
+      }
+
+      section {
+        margin-bottom: 2rem;
+      }
+
+      /* Adjust list formatting for mobile */
+      ol {
+        padding-left: 1.5rem;
+        max-width: 100%;
+      }
+
+      ol li {
+        margin: 1rem 0;
+      }
+
+      ul li {
+        padding-left: 0.75rem;
+      }
+
+      /* Improve text readability on mobile */
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    }
+
+    /* Extra small devices */
+    @media screen and (max-width: 480px) {
+      .floating-icon {
+        width: 120px; /* Even smaller icon on very small screens */
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      /* Adjust list spacing further */
+      ol {
+        padding-left: 1.25rem;
+      }
+
+      ol ul {
+        padding-left: 1rem;
+      }
+    }
+</style>
+
 </head>
 <body>
   <header>
