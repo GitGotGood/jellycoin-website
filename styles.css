@@ -8,15 +8,36 @@ body {
     color: #333;
   }
   
+  .floating-icon {
+    position: absolute;
+    top: 50%; /* Start at the vertical center */
+    left: 50%; /* Start at the horizontal center */
+    transform: translate(-50%, -50%); /* Center the jellyfish */
+    pointer-events: none;
+    transition: transform 0.1s ease-out; /* Smooth movement effect */
+    z-index: 10; /* Ensure it remains visible over the header background */
+  }
+
   header {
-    background-color: #4cafef;
+    background-image: url('images/jellycoin_website_headerbg.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 2rem 1rem;
     color: white;
-    padding: 20px;
+    position: relative; /* Required for the floating jellyfish to stay within bounds */
+    height: 400px; /* Ensure sufficient height for the jellyfish to move */
+    overflow: hidden; /* Prevent overflow of the jellyfish outside the header */
   }
   
   .logo {
     width: 100px;
-    margin-bottom: 10px;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to anchor the jellyfish at its center */
+    pointer-events: none; /* Prevent mouse interaction */
+    transition: transform 0.1s ease-out; /* Smooth movement */
   }
   
   main {
